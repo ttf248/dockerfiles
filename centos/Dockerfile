@@ -4,7 +4,7 @@
 # Run: 
 #      $ docker build -t registry.cn-shenzhen.aliyuncs.com/tianlongxiang51/cmake-gcc:20190718-1 -f cmake .
 
-FROM centos:7.6.1810
+FROM centos:7
 
 ENV LC_ALL en_US.UTF-8
 
