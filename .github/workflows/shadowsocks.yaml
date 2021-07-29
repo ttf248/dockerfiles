@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - 'master'
+    paths:
+      - 'shadowsocks/**'
 
 env:
   Registry: registry.cn-hangzhou.aliyuncs.com/tianlongxiang51/shadowsocks

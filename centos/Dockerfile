@@ -8,13 +8,6 @@ FROM centos:7
 
 ENV LC_ALL en_US.UTF-8
 
-RUN yum install -y wget && \
-    cd /etc/yum.repos.d && \
-    wget -O CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
-    wget -O epel.repo http://mirrors.aliyun.com/repo/epel-7.repo 
+RUN yum -y install epel-release && yum repolist && yum makecache
 
-RUN yum install -y cmake3
-
-RUN yum makecache && yum groups install -y "Development Tools"
-
-RUN yum install -y wget make gcc binutils gcc-c++ doxygen
+RUN yum install -y cmake3 && yum makecache && yum groups install -y "Development Tools" && yum install -y wget make gcc binutils gcc-c++ doxygen

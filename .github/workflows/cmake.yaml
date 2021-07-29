@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - 'master'
+    paths:
+      - 'centos/**'
 
 env:
   Registry: registry.cn-hangzhou.aliyuncs.com/tianlongxiang51/cmake
