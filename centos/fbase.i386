@@ -1,0 +1,20 @@
+# HOW TO BUILD THIS IMAGE
+# -----------------------
+# Put all downloaded files in the same directory as this Dockerfile
+# Run: 
+#      $ docker build -t registry.cn-shenzhen.aliyuncs.com/tianlongxiang51/centos:fbase -f fbase.i386 .
+
+FROM i386/centos:7
+
+RUN yum install -y openssl make gcc binutils gcc-c++ compat-libstdc++ \
+	elfutils-libelf-devel elfutils-libelf-devel-static ksh libaio libaio-devel numactl-devel sysstat unixODBC \ 
+	unixODBC-devel pcre-devel glibc.i686 unzip sudo \
+	openssl openssl-devel \
+	glibc glibc-devel libstdc++ libstdc++-devel compat-libstdc++-33 \
+    libxml2 libxml2-devel \
+	curl libcurl libcurl-devel \
+	net-tools vim telnet nc && \
+	yum groups install -y "Development Tools" && \
+	yum clean all && \
+    rm -rf /var/cache/yum && \
+    rm -rf ~/anaconda-ks.cfg
