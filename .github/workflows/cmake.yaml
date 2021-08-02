@@ -39,4 +39,4 @@ jobs:
           push: true
           tags: |
             ${{env.Registry}}:latest
-            ${{env.Registry}}:$GITHUB_SHA
+            ${{env.Registry}}:${{ GITHUB_SHA }}
