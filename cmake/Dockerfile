@@ -1,8 +1,4 @@
-# HOW TO BUILD THIS IMAGE
-# -----------------------
-# Put all downloaded files in the same directory as this Dockerfile
-# Run: 
-#      $ docker build -t registry.cn-shenzhen.aliyuncs.com/tianlongxiang51/cmake-gcc:20190718-1 -f cmake .
+# HOW TO BUILD THIS IMAGE ref github workflow
 
 FROM centos:7
 
