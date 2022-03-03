@@ -9,7 +9,7 @@ on:
       - 'cmake/**'
 
 env:
-  Registry: i-do-docker.pkg.coding.net/develop/base
+  Registry: registry.cn-hangzhou.aliyuncs.com/tianlongxiang51/cmake
 
 jobs:
   build-image:
@@ -24,12 +24,12 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Login to Coding Container Registry
+      - name: Login to Aliyun Container Registry
         uses: docker/login-action@v1 
         with:
-          registry: ${{ env.Registry }}
-          username: ${{ secrets.CODING_USERNAME }}
-          password: ${{ secrets.CODING_PASSWORD }}
+          registry: registry.cn-hangzhou.aliyuncs.com
+          username: ${{ secrets.ALIYUN_USERNAME }}
+          password: ${{ secrets.ALIYUN_PASSWORD }}
 
       - name: Build and push
         uses: docker/build-push-action@v2
